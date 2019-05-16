@@ -1,0 +1,70 @@
+
+body {
+	background-color:lightblue;
+}
+
+/*Main div from the signup page*/
+#signupDiv{
+	background-color:white;
+	border-radius: 10px; 
+	border-style: solid;
+	border-width: 3px;
+    border-color: lightgrey;
+    padding:15px;
+
+}
+
+/*This is the div for the logo in the signup page*/
+#logoDiv{
+	margin-top:20px;
+	margin-left:20px;
+}
+
+#logo{
+	border-style: solid;
+	border-color: white; 
+	border-width: 3px; 
+	border-radius:10px;
+	background-color: white;
+}
+
+#footer{
+	position: absolute;
+	padding-bottom: 5px;
+	bottom:0px;
+	padding-left: 20px;
+	padding-top: 10px;
+	background-color: #eeeeee;
+	width: 100%;
+	border-style: solid;
+	border-width: 3px;
+	border-color: lightgrey;
+}
+#loginForm input{
+	border-radius: 10px;
+	border-style: solid; 
+	border-width: 2px; 
+	border-color: #bbb;
+	margin-bottom: 3px;
+}
+
+td, th {
+    padding-right: 3px;
+}
+/*
+element {
+
+    text-align: center;
+    background-color: lightgray;
+    margin-left: 202px;
+    margin-right: 202px;
+    border-style: solid;
+    border-width: 3px;
+        border-bottom-width: 3px;
+    border-radius: 10px;
+    margin-bottom: -14px;
+    border-bottom-width: 1px;
+    height: 52px;
+    border-color: #999;
+
+}*/
