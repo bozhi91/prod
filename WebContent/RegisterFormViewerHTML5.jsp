@@ -42,24 +42,23 @@ else
 
 
   <!-- Signup form-->
-
-<div class="row" style="margin-left: 10%; margin-right: 10%;">
+<br/><br/>
+<div class="row" style=" margin-right: 10%;">
 	<div class="col-sm-2"></div>
-    <div class="col-sm-8" style="background-color: lightyellow;" id="signupDiv">
+    <div class="col-sm-8" style="background-color: lightyellow;  width:80%;" id="signupDiv">
   	   <h2 style="text-align: center;">CREATE AN ACCOUNT</h2>
     </div>
     <div class="col-sm-2"></div>
-</div>    
+</div>
 
-  <div class="row" 
-  style="margin-left: 10%; margin-right: 10%; padding-top: 17px;margin-top: -17px;">
+  <div class="row" style="margin-right: 10%; padding-top: 17px;margin-top: -17px;">
 
 	<div class="col-sm-2"></div>
-    <div class="col-sm-8" id="signupDiv" style="margin-top: -12px; text-align:center;">
-	  <!--  <center> -->
+    <div class="col-sm-8" id="signupDiv" style="margin-top: -12px; text-align:center;  width:80%;">
+	<center> 
 		<form  action="RegisterFormController" method="post" id="registerForm">
 		
-		  	<table cellpadding="20" style="text-align:center;">
+		  	<table cellpadding="20">
 		  	<tr>
 		  	  <td>Full name*(Minimum 5 characters)</td> <td><input type="text" name="username" id="username"
 		  	   value="<%=user.getUsername() %>"  placeholder="John Doe" required minlength="5"/></td>
@@ -83,26 +82,24 @@ else
 		    <tr>
 		  	  <td>Password*(>5 chars, digit and uppercase)</td> 
 		  	  <td>		  	  	
-				<input type="password" name="pwd" id="pwd"
-				 value="<%=user.getPwd() %>" required pattern="^(?=.*[0-9])(?=.*?[A-Z])(?=.*?[a-z]).{5,}$"/>	
-				 		
-				<label style="color: red; display:none;" id="mismatchLabel">Password mismatch!</label><br/>		  	 
+				<input type="password" name="pwd" id="pwd" required pattern="^(?=.*[0-9])(?=.*?[A-Z])(?=.*?[a-z]).{5,}$"
+				 onkeyup="verifyData(event)" onfoucs="verifyData(event)" />					 						
 		  	  </td>
 		    </tr>
 
  			<tr>
 		  	  <td>Retype Password*</td> 
 		  	  <td>
-				<input type="password" name="repwd" id="repwd" required/>
-				<label id="pwdSection" style="color:#ff0000; display: none;">Password Mismatch. Please, type the same password in both fields!</label>
-		  	  </td>
+				<input type="password" name="repwd" id="repwd" required onkeyup="verifyData(event)" onfoucs="verifyData(event)"/>
+				<label id="pwdSection" style="color:#ff0000; display: none;">Password Mismatch. Type the same password in both fields!</label>				
+		  	  </td>		
 		    </tr>
 		   
 		    <tr>
 		  	  <td>Birthdate*</td> <td>
-		  	  	<input type="date" name="birthdate" id="birthdate" value="<%=user.getBirthdate() %>" required/>
-				<label id="dateSection" style="color:#ff0000; display: none;">You must be at least 18 years old in order to register.</label>
-		  	  </td>
+		  	  	<input type="date" name="birthdate" id="birthdate" value="<%=user.getBirthdate() %>" required onchange="verifyData(event)"/>
+		  	  	<label id="dateSection" style="color:#ff0000; display: none;">You must be at least 18 years old in order to register.</label>				
+		  	  </td>		  	  
 		    </tr>
 		  
 		    <!-- GENDER -->
@@ -117,11 +114,11 @@ else
 			
 		   	<tr>
 		   		<td colspan="2" style="text-align: center;"><br/>
-		    	<input type="submit" value="Sign up" onclick="verifyData(event)"/>
+		    	<input id="subBtn" type="submit" value="Sign up" onclick="verifyData(event)"/>
 		    	</td>
 			</tr>		    
 		    </table>
-		  <!-- </center> -->
+		</center>
 		</form>
     </div>
     <div class="col-sm-2"></div>
@@ -132,7 +129,11 @@ else
 <!-- ===== End of the form ===== -->
 	
 	<div id="footer">
-		<p>Copyright(c) T-Event 2019  Bozhidar, Rachida, Imane - Software engineers - </p>
+		<p>Copyright(c) T-Event 2019  
+		<a href="https://www.linkedin.com/in/bozhidar-peychev-4a6b76106/" target=_blank>Bozhidar</a>,
+		<a href="" target=_blank>Rachida</a>,
+		<a href="" target=_blank>Imane</a>
+		- Software engineers - </p>
 	</div>
 
 </body>

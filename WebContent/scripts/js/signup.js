@@ -1,6 +1,5 @@
-	
+
 	function verifyData(event){
-				
 				var formElement = document.getElementById("registerForm");
 				formData = new FormData(formElement);
 				
@@ -9,13 +8,14 @@
 				var pass2 = document.getElementById("repwd").value;
 				var date  = formData.get("birthdate");
 				var year  = date.split("-");
-						
-				
-			    if(pass1.localeCompare(pass2)!=0 && error==0){
-					//alert("Password mismatch");		
+		
+			   if(pass1.localeCompare(pass2)!=0){
 					 $( "#pwdSection" ).css("display", "inline");
-					error=1;			
 				}
+				else{
+					 $( "#pwdSection" ).css("display", "none");
+				}
+				
 				
 			    if((new Date().getFullYear()-year[0])<18){
 			    	error=1;	
