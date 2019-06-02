@@ -1,4 +1,5 @@
-package models;
+
+package com.twitter.model;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
